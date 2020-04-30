@@ -46,13 +46,6 @@ class App extends Component {
   render() {
     return (
         <div className='App'>
-            {this.state.threads.map(thread => 
-              <Thread 
-                thread={thread}
-                reply={this.handleReply}
-                key={thread.id}
-              />
-            )}
             <Thread 
               thread={
                 {
@@ -62,6 +55,13 @@ class App extends Component {
               }
               reply={this.handleCreate}
             />
+            {this.state.threads.slice(0).reverse().map(thread => 
+              <Thread 
+                thread={thread}
+                reply={this.handleReply}
+                key={thread.id}
+              />
+            )}
         </div>
     );
   }
