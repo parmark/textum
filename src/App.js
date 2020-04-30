@@ -1,12 +1,26 @@
 import React, {Component} from 'react';
 import Thread from './components/Thread';
-import './App.css'
+import './App.css';
+import { firestore } from './firebase'
 
 class App extends Component {
   state = {
-    threads: [
-      
-    ]
+    threads: []
+  }
+
+  componentDidMount = async () => {
+    const snapshot = await firestore.collection('threads').get()
+    let threads = [];
+
+    snapshot.forEach(doc => {
+      const data = doc.data();
+
+      threads.push(data);
+    })
+
+    this.setState((state) => {
+      return {threads: threads}
+    })
   }
 
   // Handles replies to existing threads
@@ -18,11 +32,7 @@ class App extends Component {
       content: document.getElementById(`post-field-${props.id}`).value}
     )
 
-    console.log(this.state)
-
     this.setState(() => threads)
-
-    console.log(this.state)
   }
 
   // Handles replies to new threads
@@ -40,7 +50,6 @@ class App extends Component {
     })
 
     this.setState(() => ({threads}))
-
   }
 
   render() {
