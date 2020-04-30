@@ -1,0 +1,34 @@
+body {
+    background-color: rgb(51, 90, 69);
+}
+
+.App {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, calc(30% - 40px));
+}
+
+.thread {
+    border-radius: 0px;
+    background: #81aa73;
+    padding: 20px;
+    margin: 5px 5px;
+    height: fit-content;
+}
+
+.post {
+    border-radius: 0px;
+    background: #719465;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.name {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.content {
+    margin-left: 50px;
+}
+
