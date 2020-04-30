@@ -1,43 +1,11 @@
 import React, {Component} from 'react';
 import Thread from './components/Thread';
+import './App.css'
 
 class App extends Component {
   state = {
     threads: [
-      {
-        id: 0,
-        posts: [
-          {
-            name: 'Nonomy', 
-            content: '^&%*&^$%*&'
-          }, 
-          {
-            name: 'Chii-sama', 
-            content: '&*^#*(&*($....?'
-          }, 
-          {
-            name: null, 
-            content: '....!!'
-          }
-        ] 
-      }, 
-      {
-        id: 1, 
-        posts: [
-          {
-            name: 'Nonomy', 
-            content: '^&%*&^$%*&'
-          }, 
-          {
-            name: 'Chii-sama', 
-            content: "&*^#*(&*($....?"
-          }, 
-          {
-            name: null, 
-            content: '....!!'
-          }
-        ] 
-      }
+      
     ]
   }
 
