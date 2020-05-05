@@ -7,13 +7,15 @@ function Thread(props) {
     return (
         <div className='thread'>
             <ReplyBox 
-                id={props.thread.id}
+                index={props.index}
                 reply={props.reply}
+                id={props.id}
             />
             {props.thread.posts.map(post => 
             <Post 
                 name={post.name} 
                 content={post.content}
+                id={post.id}
             />)}
         </div>
     )

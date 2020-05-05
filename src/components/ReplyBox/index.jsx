@@ -11,11 +11,11 @@ function ReplyBox(props) {
             <form>
                 {/* Name field */}
                 <span>
-                    <input type="text" id={`name-field-${props.id}`} name='text'/>
+                    <input type="text" id={`name-field-${props.index}`} name='text'/>
                 </span>
                 {/* Post field */}
                 <span>
-                    <input type="text" id={`post-field-${props.id}`}/>
+                    <input type="text" id={`post-field-${props.index}`}/>
                 </span>
                 <button onClick={handleReply}>Reply</button>
             </form>
