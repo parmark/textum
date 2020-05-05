@@ -1,34 +1,33 @@
 body {
-    background-color: rgb(51, 90, 69);
+    background-color: rgb(247, 255, 242);
 }
 
 .App {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(6, calc(30% - 40px));
+    grid-template-rows: repeat(6, calc(30% - 40px));
 }
 
 .thread {
-    border-radius: 0px;
-    background: #81aa73;
     padding: 20px;
     margin: 5px 5px;
     height: fit-content;
+    width: fit-content;
 }
 
 .post {
-    border-radius: 0px;
-    background: #719465;
     padding: 10px;
-    margin: 10px auto;
+    margin: 10px;
+    width: fit-content;
+    background: rgb(226, 255, 226);
+    border: solid black 1px;
 }
 
 .name {
     margin: 0;
-    text-transform: uppercase;
 }
 
 .content {
-    margin-left: 50px;
+    margin-left: 10px;
 }
 
