@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Thread from './components/Thread';
+import Header from './components/Header'
 import './App.css';
 import { firestore } from './firebase'
 import firebase from 'firebase/app'
@@ -78,23 +79,18 @@ class App extends Component {
   render() {
     return (
         <div className='App'>
-            <Thread 
-              thread={
-                {
-                  posts: []
-                }
-              }
-              reply={this.handleCreate}
-            />
-            {this.state.threads.slice(0).reverse().map(thread => 
-              <Thread 
-                thread={thread}
-                reply={this.handleReply}
-                index={this.state.threads.indexOf(thread)}
-                id={thread.id}
-                key={thread.id}
-              />
-            )}
+            <Header handleCreate={this.handleCreate}/>
+            <div className='threads'>
+              {this.state.threads.slice(0).reverse().map(thread => 
+                <Thread 
+                  thread={thread}
+                  reply={this.handleReply}
+                  index={this.state.threads.indexOf(thread)}
+                  id={thread.id}
+                  key={thread.id}
+                />
+              )}
+            </div>
         </div>
     );
   }
