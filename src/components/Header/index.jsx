@@ -7,14 +7,16 @@ function Header(props) {
             <div className="title">
                 Textum
             </div>
-            <Thread 
-                thread={
-                    {
-                        posts: []
+            <div className="create">
+                <Thread 
+                    thread={
+                        {
+                            posts: []
+                        }
                     }
-                }
-                reply={props.handleCreate}
-            />
+                    reply={props.handleCreate}
+                />
+            </div>
         </div>
     )
 }

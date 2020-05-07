@@ -1,21 +1,30 @@
+/* Color Variables */
+:root {
+    --mainColor: #242038;
+    --subColor: #8D99AE;
+    --titleColor: #222725;
+}
+
+
 body {
-    background-color: #534B62;
+    background-color: var(--mainColor);
     font-family: 'Abel', sans-serif;
 }
 
 .threads {
-    display: grid;
-    grid-template-columns: repeat(6, calc(30% - 40px));
+    display: flex;
+    flex-direction: row;
     height: 100vh;
     width: 100vw;
+    gap: 0;
 }
 
 .thread {
     padding: 20px;
     height: fit-content;
     width: fit-content;
-    background-color: #A499B3;
-    margin-right: 10px
+    background-color: var(--subColor);
+    margin-right: 10px;
 }
 
 .post {
@@ -36,6 +45,7 @@ body {
     grid-area: content;
     margin-left: 5%;
     margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .submit {
@@ -58,16 +68,11 @@ form {
 }
 
 .title {
-    background: #222725;
-    color: #D0BCD5;
+    color: var(--subColor);
     font-size: 100px;
     background-size: 40px 40px;
     background-image: radial-gradient(circle, #ffffff 1px, rgba(0, 0, 0, 0) 1px);
     font-family: 'Abel', sans-serif;
     text-align: center;
     border-radius: 100px;
-}
-
-.create {
-
 }
