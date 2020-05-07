@@ -6,7 +6,7 @@ function Post(props) {
             {props.name ? 
                 <p className='name'>{props.name} No. {props.id}</p>
             :
-            <p className='name'>Anonymous No. {props.id}</p>
+                <p className='name'>Anonymous No. {props.id}</p>
             }
             <p className='content'>{props.content}</p>
 
