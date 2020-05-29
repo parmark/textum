@@ -5,12 +5,12 @@
     --titleColor: #222725;
 }
 
-
 body {
     background-color: var(--mainColor);
     font-family: 'Abel', sans-serif;
 }
 
+ /* Post and thread styling */
 .threads {
     display: flex;
     flex-direction: row;
@@ -27,6 +27,7 @@ body {
     margin-right: 10px;
 }
 
+ /* Posts */
 .post {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -48,19 +49,33 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.submit {
-    grid-area: submit;
-}
-
+/* Reply boxes*/
 form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
     "name submit"
     "content submit";
-    grid-gap: 5%;
 }
 
+.name-input {
+    grid-area: name;
+}
+
+.content-input {
+    grid-area: content;
+}
+
+.submit {
+    grid-area: submit;
+}
+
+input[type=text] {
+    border: none;
+    background-color: transparent;
+}
+
+/* Header styling */
 .header {
     display: grid;
     grid-template-areas: "title create";
